@@ -1,4 +1,4 @@
-﻿#include <iostream>
+#include <iostream>
 #include <Windows.h>
 #include <conio.h>
 using namespace std;
@@ -35,7 +35,9 @@ int main()
 		}
 
 		if (vvod == 2) {
-			int a = -127;
+			cout << "Введите целое число\n";
+			int a;
+			cin >> a;
 			int order = sizeof(int) * 8 - 1;
 			int mask = 1 << order;
 			cout << a << ' ' << &a << ' ' << order << ' ' << mask << '\n';
@@ -44,7 +46,9 @@ int main()
 		}
 
 		if (vvod == 3) {
-			int a = -127;
+			cout << "Введите целое число\n";
+			int a;
+			cin >> a;
 			int order = sizeof(int) * 8 - 1;
 			int mask = 1 << order;
 			for (int i = 0; i <= order; i++) {
