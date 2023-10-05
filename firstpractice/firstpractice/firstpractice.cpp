@@ -1,4 +1,4 @@
-#include <iostream>
+﻿#include <iostream>
 #include <Windows.h>
 #include <conio.h>
 using namespace std;
@@ -40,9 +40,16 @@ int main()
 			cin >> a;
 			int order = sizeof(int) * 8 - 1;
 			int mask = 1 << order;
-			cout << a << ' ' << &a << ' ' << order << ' ' << mask << '\n';
+			for (int i = 0; i <= order; i++) {
+				cout << ((a & mask) ? 1 : 0);
+				a = a << 1;
+				if (!i || (i + 1) % 8 == 0)
+				{
+					cout << ' ';
+				}
+			}
+			cout << "\n";
 			_getch();
-			
 		}
 
 		if (vvod == 3) {
@@ -63,6 +70,7 @@ int main()
 				int integerA = 127;
 				float floatB;
 			};
+			cout << "\n";
 			_getch();
 			
 		}
